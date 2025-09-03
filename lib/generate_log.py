@@ -1,6 +1,6 @@
 from datetime import datetime
 import requests
-
+import os
 
 data = ["User logged in", "User updated profile", "Report exported"]
 
@@ -18,6 +18,7 @@ def generate_log(data):
 
     # STEP 4: Print a confirmation message with the filename
     print(f"Log written to {filename}")
+    return filename
 
 def fetch_data():
     response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
